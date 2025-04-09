@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forever Living - Wellness & Opportunity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #1f2937;
+    }
+    header {
+      background-color: #059669;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+   
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .container {
+      max-width: 100%;
+      margin: auto;
+      padding: 2rem;
+    }
+    .cta {
+      background-color: #d1fae5;
+      border: 2px dashed #059669;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta a {
+      background-color: #059669;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section ul li {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .section ul li:hover {
+      background-color: #ecfdf5;
+      transform: scale(1.05);
+      border-left: 4px solid #059669;
+    }
+    .image-carousel {
+  position: relative;
+  width: 1200px;
+  height: 400px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.carousel-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fadeZoom 16s infinite;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.carousel-images:nth-child(1) {
+  animation-delay: 0s;
+}
+.carousel-images:nth-child(2) {
+  animation-delay: 4s;
+}
+.carousel-images:nth-child(3) {
+  animation-delay: 8s;
+}
+.carousel-images:nth-child(4) {
+  animation-delay: 12s;
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+  
+
+    .testimonials {
+      background-color: #fff7ed;
+      border-left: 4px solid #fbbf24;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      font-style: italic;
+      position: relative;
+      height: 80px;
+      overflow: hidden;
+    }
+    .testimonial-slider {
+      position: absolute;
+      animation: slide 15s linear infinite;
+    }
+    @keyframes slide {
+      0%, 25% { top: 0; }
+      33%, 58% { top: -80px; }
+      66%, 91% { top: -160px; }
+      100% { top: 0; }
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+   
+    @media (max-width: 600px) {
+      .carousel img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #059669;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .quick-contact {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #050f96;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      z-index: 1001;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .quick-contact:hover {
+      background-color: #047857;
+    }
+    
+      .testimonial-slider-wrapper {
+        width: 90%;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ecfdf5;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+      }
+    
+      .testimonial-slider-track {
+        display: flex;
+        width: max-content;
+        animation: slideTestimonial 60s linear infinite;
+      }
+    
+      .testimonial-card {
+        min-width: 300px;
+        max-width: 300px;
+        margin-right: 2rem;
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 0.75rem;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        font-style: italic;
+        color: #333;
+      }
+    
+      .testimonial-card strong {
+        display: block;
+        margin-top: 0.5rem;
+        color: #059669;
+        font-style: normal;
+      }
+    
+      @keyframes slideTestimonial {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+    
+      @media (max-width: 768px) {
+        .testimonial-card {
+          min-width: 260px;
+        }
+      }
+    
+  </style>
+</head>
+<body>
+  <a href="https://wa.link/g8qg1r" target="_blank" class="quick-contact">Chat on WhatsApp 💬</a>
+
+  <header>
+    <img  src="https://cdn.foreverliving.com/flpi/logo/foreverliving-eCom-logo.svg" alt="Forever Living Logo">
+    <h1>Live Better with Forever Living 🌿</h1>
+    <p>Discover natural wellness products & earn from home</p>
+  </header>
+  
+  
+  <div class="container">
+    <div class="image-carousel">
+      <div class="carousel-images fade">
+        <img src="https://cdn.foreverliving.com/content/cards/images/what_matters_most__banner_1120x350_1643235854192.jpg" alt="Forever Ultra">
+      </div>
+      <div class="carousel-images fade">
+        <img src="https://cdn.foreverliving.com/content/cards/images/ppy_-_banner_banner_1120x350_1725637954023.jpg" alt="F15 Beginner">
+      </div>
+      <div class="carousel-images fade">
+        <img src="https://cdn.foreverliving.com/content/cards/images/skin_oil_ad_544x568_1722442151104.jpg" alt="Clean 9">
+      </div>
+
+      <div class="carousel-images fade">
+        <img  src="https://cdn.foreverliving.com/content/cards/images/tightening_mask_powder_v2_banner_1120x350_1739399290510.jpg" alt="Forever Ultra">
+      </div>
+ 
+  
+   
+    </div>
+
+
+    <div class="section">
+     
+      <p>We provide Aloe Vera-based health, wellness, and skincare products trusted globally. Become a customer or build your own business by sharing what you love!</p>
+    </div>
+
+    <div class="section">
+      <ul>
+        <li>💪 Weight Management</li>
+        <li>✨ Skincare & Beauty</li>
+        <li>⚡ Energy & Immunity</li>
+        <li>🧘‍♂️ Digestive Health</li>
+        <li>🏃 Fitness & Sports</li>
+      </ul>
+      
+    </div>
+    <div class="section">
+    
+      <iframe 
+        src="https://gallery.foreverliving.com/gallery/ZAF/download/Literature/PRODUCT_CATALOGUE.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+        width="100%" 
+        height="600px" 
+        style="border: 1px solid #ccc; border-radius: 8px;"
+      >
+      </iframe>
+    </div>
+ 
+
+    <div class="section">
+      <h2>💼 Business Opportunity</h2>
+      <p>Forever's products are loved by people in more than 140 countries around the world. Discover the most popular products to help you look better and feel better.</p>
+
+      <img width="100%" src="https://cdn.foreverliving.com/content/cards/images/joinnow_banner_1120x350_1702033172869.png" alt="banner">
+
+    </div>
+    <div class="cta">
+    
+      <h3>Ready to Start?</h3>
+      <p>Fill out our quick form to get product tips or join our team.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4isysftl_yvXh1gmH4TbF3noRGRrc77tLminyZDf6aqeHMg/viewform?usp=header" target="_blank">Join Now</a>
+    </div>
+
+    <div class="testimonial-slider-wrapper">
+      <h2>💚 Loved by Forever Users</h2>
+      <div class="testimonial-slider-track" id="testimonial-track">
+        <div class="testimonial-card">“Forever Aloe Vera Gel has transformed my digestion! I feel lighter, healthier, and more energetic every day.” – <strong>Neha S.</strong></div>
+        <div class="testimonial-card">“I’ve been using the Infinite Skincare line for 6 months and my skin has never looked this youthful!” – <strong>Rita K.</strong></div>
+        <div class="testimonial-card">“Forever Arctic Sea helped me maintain healthy cholesterol levels. A game changer!” – <strong>Rajeev M.</strong></div>
+        <div class="testimonial-card">"Clean 9 gave me a fresh start! I lost inches and felt detoxed in just 9 days.” – <strong>Megha V.</strong></div>
+        <div class="testimonial-card">“Forever Bright Toothgel is the only natural toothpaste my family uses. Fresh breath and safe ingredients!” – <strong>Suresh R.</strong></div>
+        <div class="testimonial-card">“Forever Bee Honey tastes amazing and supports my immunity naturally. I never start my day without it.” – <strong>Priya D.</strong></div>
+        <div class="testimonial-card">“Forever Therm gave me the energy I needed to kickstart my fitness journey.” – <strong>Akash T.</strong></div>
+        <div class="testimonial-card">“My kids love the Forever Kids multivitamins – and I love the peace of mind it brings.” – <strong>Anita B.</strong></div>
+        <div class="testimonial-card">“I’ve replaced my protein shakes with Forever Lite Ultra. Tastes great and keeps me full!” – <strong>Kiran P.</strong></div>
+        <div class="testimonial-card">“The Aloe Lips balm is my go-to all year round. Smooth, soft, and healing!” – <strong>Manisha G.</strong></div>
+        <div class="testimonial-card">“Forever Freedom helped relieve my joint stiffness. I can walk and dance without pain now!” – <strong>Ramesh N.</strong></div>
+        <div class="testimonial-card">“Forever Immublend gave me the immune support I needed, especially during seasonal changes.” – <strong>Sneha T.</strong></div>
+        <div class="testimonial-card">“The skincare combo with Aloe Vera Gelly and Aloe Propolis Cream works wonders on dry skin.” – <strong>Deepika J.</strong></div>
+        <div class="testimonial-card">“My morning routine is incomplete without Aloe Berry Nectar – it tastes amazing and supports my urinary health.” – <strong>Kavita M.</strong></div>
+        <div class="testimonial-card">“Joining Forever Living not only improved my wellness, but also my financial independence!” – <strong>Divya S.</strong></div>
+      
+      
+      </div>
+    </div>
+    
+   
+    
+
+ 
+
+   
+
+    
+
+    <div class="section">
+      <img width="100%" src="https://cdn.foreverliving.com/content/staticpages/images/plant_to_product_staticpage_image_1120x505_1741810590817.jpg" alt="banner-info">
+
+    </div>
+  </div>
+
+  <footer>
+    
+    <p>&copy; 2025 Forever Living Partner. Built with 💚 to help you live well and earn more.</p>
+    <div class="social-icons">
+      <a href="https://foreverliving.com/ind/en-us/home" target="_blank"><img src="data:image/jpeg;base64,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" alt="Forever"></a>
+      <a href="https://www.facebook.com/flpindia" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/flpindia/#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://www.youtube.com/flpindia" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+
+    </div>
+  </footer>
+  <script>
+    // Auto-scroll every 3 seconds
+    setInterval(() => {
+      document.querySelectorAll('.auto-carousel').forEach(carousel => {
+        carousel.scrollBy({ left: 220, behavior: 'smooth' });
+      });
+    }, 3000);
+  </script>
+  
+</body>
+</html>
